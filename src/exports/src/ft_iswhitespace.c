@@ -12,7 +12,7 @@
 
 #include "../libft.h"
 
-unsigned char	iswhitespace(const char character)
+unsigned char	ft_iswhitespace(const char character)
 {
 	if (character == ' ' || character == '\n' || character == '\t'
 		|| character == '\v' || character == '\f' || character == '\r')

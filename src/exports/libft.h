@@ -73,7 +73,7 @@ int				ft_isdigit(int c);
 
 int				ft_isalnum(int c);
 
-unsigned char	iswhitespace(const char character);
+unsigned char	ft_iswhitespace(const char character);
 
 int				ft_isascii(int c);
 
