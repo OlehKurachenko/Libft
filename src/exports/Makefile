@@ -95,11 +95,10 @@ SRC_N =	ft_strlen.c \
 		ft_longdigit.c \
 		ft_putnbr_base.c \
 		ft_sf_bin_put_longlong.c \
-		ft_ldpow.c
+		ft_ldpow.c \
+		ft_iswhitespace.c
 
 OBJ = $(addprefix $(OBJ_DIR)/, $(SRC_N:.c=.o))
-
-INCL_H = lib.h
 
 all: $(NAME)
 
