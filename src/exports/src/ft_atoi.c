@@ -14,26 +14,26 @@
 
 int			ft_atoi(const char *str)
 {
-	long long		i;
+	unsigned		i;
 	long long		res;
-	long long		is_negative;
+	bool			is_negative;
 
 	i = 0;
 	res = 0;
-	is_negative = 1;
-	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'
-			|| str[i] == '\v' || str[i] == '\f' || str[i] == '\r')
-		i++;
+	is_negative = false;
+	while (ft_iswhitespace(str[i]))
+		++i;
 	if (str[i] == '-')
 	{
-		is_negative = -1;
-		i++;
+		is_negative = true;
+		++i;
 	}
 	else if (str[i] == '+')
-		i++;
+		++i;
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		res = res * 10 + (int)str[i++] - (int)'0';
+		res = res * 10 + (int)str[i] - (int)'0';
+		++i;
 	}
-	return (res * is_negative);
+	return ((is_negative) ? -res : res);
 }
